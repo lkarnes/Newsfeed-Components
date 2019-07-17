@@ -87,7 +87,61 @@ const data = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   }
 ];
+class Component {
+  constructor(section,title, date, par1, par2, par3){
+    this.section = section;
+    this.sectionTitle = section.querySelector('h2');
+    this.sectionTitle.textContent = title;
+    this.theDate = section.querySelector('p.date');
+    this.theDate.textContent = date;
+    this.paragraphs = section.querySelectorAll('p:not([class])');
+    this.paragraphs = Array.from(this.paragraphs);
+    this.paragraphs[0].textContent = par1;
+    this.paragraphs[1].textContent = par2;
+    this.paragraphs[2].textContent = par3;
+    this.button = section.querySelector('span');
+    this.button.addEventListener('click', ()=>{
+      toggleOn();
+    })
+  }
+  toggleOn(){
+    const article = this.section.querySelector('div');
+    article.classList.toggle('article-on');
+    }
+}
 
+const createPanel = () => {
+  const articleBox = document.querySelector('.articles');
+  console.log(articleBox);
+  const article = document.createElement('div');
+  article.classList.add('article');
+  const header = document.createElement('h2');
+  const date = document.createElement('p');
+  date.classList.add('date');
+  const para1 = document.createElement('p');
+  const para2 = document.createElement('p');
+  const para3 = document.createElement('p');
+  const span = document.createElement('span')
+  span.classList.add('expandButton');
+  articleBox.appendChild(article);
+  article.appendChild(header);
+  article.appendChild(date);
+  article.appendChild(para1);
+  article.appendChild(para2);
+  article.appendChild(para3);
+  article.appendChild(span);
+  
+}
+data.map((data)=> {
+    newComponent = new Component(
+    createPanel(),
+    data.title, 
+    data.date,
+    data.firstParagraph,
+    data.secondParagraph,
+    data.thirdParagraph
+    );
+});
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
