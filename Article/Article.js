@@ -85,6 +85,24 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Look at this Dude',
+    date: 'Jan 5th, 2101',
+    firstParagraph: `Lorem ipsizzle dolor sit amizzle, bizzle adipiscing boom shackalack. Nullam its fo rizzle velizzle, fo shizzle volutpizzle,
+          ghetto gangsta, rizzle vizzle, crackalackin. Pellentesque eget tortor. Sed erizzle. We gonna chung izzle dolizzle dapibus turpis tempus
+          my shizz. Mauris pellentesque nibh et turpis. Vestibulum izzle mah nizzle. Pellentesque yippiyo rizzle pot. In dang the bizzle platea dictumst.
+          That's the shizzle dapibizzle. Curabitur tellus bling bling, pretizzle izzle, shiz dizzle, eleifend vitae, nunc. Shiz suscipizzle. Integer semper
+          tellivizzle sizzle sizzle.`,
+
+    secondParagraph: `Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor! Hodor hodor, hodor;
+          hodor hodor hodor? Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor! Hodor, hodor. Hodor. Hodor, HODOR
+          hodor, hodor hodor, hodor, hodor hodor. Hodor hodor - hodor - hodor... Hodor hodor hodor hodor hodor hodor hodor?! Hodor
+          hodor - hodor hodor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor? `,
+
+    thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
+          Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
+          Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   }
 ];
 const createPanel = (arg) => {
@@ -93,7 +111,7 @@ const createPanel = (arg) => {
   article.classList.add('article');
   articles.appendChild(article)
   const header = document.createElement('h2');
-  header.textContent = arg.title
+  header.textContent = arg.title;
   const date = document.createElement('p');
   date.classList.add('date');
   date.textContent = arg.date;

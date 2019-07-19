@@ -37,8 +37,7 @@ let menuItems = [
     menuButton.addEventListener('click', ()=>{
       menu.classList.toggle('menu--open');
       console.log(menuButton);
-    })
-
+    });
     return menu;
  }
  createMenu(menuItems);
